@@ -1,13 +1,14 @@
 /* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
 
-/* 
-.option-one-screen, 
+ 
+.option-one-screen,
 .option-two-screen, 
 .option-one-end, 
 .option-two-end  {
    display:none;
 }
-*/
+
+
 
 
 /* Feel free to change any of the styling below!*/
@@ -16,14 +17,18 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/* .room, .nextStep, .kitchen{
+display:none;
+} */
 /* Style the body with a background color or image if desired */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #c0dfff;
     text-align: center;
     padding: 20px;
+    background-image:;
 }
+
 
 
 /* Style the title of your story */
@@ -65,29 +70,55 @@ button {
     font-size: 16px;
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    background-color: #d80f7b;
+    color: #f4f4f4;
+    border: rgb(255, 255, 255);
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
+.kitchen{
+    display: flex;
+    /* display:none; */
+}
+
+.nextStep{
+    border: solid #2f64c7;
+    border-radius: 80px;
+    padding: 50px;
+    box-shadow: #3b7bc0;
+    background-color: rgb(177, 133, 235);
+    display:none;
+}
 button:hover {
     background-color: #0056b3;
 }
+
+.room{
+    display: flex;
+    /* display:none; */
+}
+
+/* .option-one {display:none;}
+.option-two {display:none;} */
+.option-three {display:none;}
+.option-four {display:none;}
 
 /* Style the screens for option one and option two */
 .option-one-screen,
 .option-two-screen,
 .option-one-end,
 .option-two-end {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #e278aa;
+    border: 15px solid #e02eb4;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
+    
 }
 
 /* Style the images in the screens */
@@ -99,7 +130,13 @@ button:hover {
     height: auto;
     margin-bottom: 10px;
 }
-
+.option-two-end img:hover {
+    animation: pulsing 5s fowards;
+}
+@keyframes pulsing {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.25);}
+}
 /* Style the text in the screens */
 .option-one-screen h1,
 .option-two-screen h1,
@@ -107,4 +144,13 @@ button:hover {
 .option-two-end h1 {
     font-size: 20px;
     margin-bottom: 20px;
+    
+}
+
+
+.congrats{
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #e278aa;
+    border: solid#d80f7b;
 }
